@@ -16,9 +16,9 @@ gulp.task('sss', () => {
 })
 
 gulp.task('scss', ['sss'], () => {
-  return sass('scss/**/index.scss').on('error', sass.logError)
+  return sass('scss/**/index.scss', { style: 'expanded' }).on('error', sass.logError)
     .pipe(postcss([ autoprefixer ]))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('css/'))
 })
 
 gulp.task('jade', () => {
