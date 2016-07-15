@@ -1,0 +1,23 @@
+.plump
+  display: flex
+  -webkit-appearance: none
+  -webkit-user-select: none
+
+  > .slot
+    display: flex
+    align-items: center
+    padding: em(8)
+
+    &:first-child
+      padding: em(8 6 8 12)
+
+    &:last-child
+      padding: em(8 12 8 6)
+
+    &:only-child
+      padding: em(8 12)
+
+.plump.-button
+  cursor: pointer
+
+.plump.-input

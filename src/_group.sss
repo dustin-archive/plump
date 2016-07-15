@@ -1,0 +1,12 @@
+.plump-group
+  display: flex
+  min-height: em(32) // <select>
+
+  .plump + .plump
+    margin: em(0 0 0 2)
+
+  &.-column
+    flex-flow: column
+
+    > .plump + .plump
+      margin: em(2 0 0)

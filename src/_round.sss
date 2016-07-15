@@ -1,0 +1,46 @@
+$inner-radius:  4 !default
+$outer-radius: 16 !default
+
+@mixin plump-round($first, $last, $only)
+  &:first-child
+    border-radius: em($first)
+
+  &:last-child
+    border-radius: em($last)
+
+  &:only-child
+    border-radius: em($only)
+
+.plump.-round > .slot
+  $i: $inner-radius
+  $o: $outer-radius
+
+  border-radius: 0
+  @include plump-round($o 0 0 $o, 0 $o $o 0, $o)
+
+.plump-group
+  $i: $inner-radius
+  $o: $outer-radius
+
+  &.-round .plump
+    > .slot
+      @include plump-round($i 0 0 $i, 0 $i $i 0, $i)
+
+    &:first-child > .slot
+      @include plump-round($o 0 0 $o, 0 $i $i 0, $o $i $i $o)
+
+    &:last-child  > .slot
+      @include plump-round($i 0 0 $i, 0 $o $o 0, $i $o $o $i)
+
+    &:only-child  > .slot
+      @include plump-round($o 0 0 $o, 0 $o $o 0, $o)
+
+  &.-column.-round .plump
+    &:first-child > .slot
+      @include plump-round($o 0 0 $i, 0 $o $i 0, $o $o $i $i)
+
+    &:last-child  > .slot
+      @include plump-round($i 0 0 $o, 0 $i $o 0, $i $i $o $o)
+
+    &:only-child  > .slot
+      @include plump-round($o 0 0 $o, 0 $o $o 0, $o)
