@@ -2,8 +2,14 @@
   display: flex
   min-height: em(32) // select
 
-  .plump + .plump
-    margin: em(0 0 0 2)
+  .plump
+    flex: 1 0 auto // safari and android flex-basis bug
+
+    + .plump
+      margin: em(0 0 0 2)
+
+  &.-button > .plump
+    @extend %plump-button
 
   &.-column
     flex-flow: column
