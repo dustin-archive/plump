@@ -1,0 +1,24 @@
+{
+  "name": "plump",
+  "description": "Sweet button library",
+  "authors": [
+    "Dustin Dowell <dustindowell22@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/dustindowell22/plump",
+  "keywords": [
+    "plump",
+    "button",
+    "css",
+    "scss",
+    "sass"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "color-sass": "^2.0.0"
+  }
+}
