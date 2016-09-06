@@ -1,7 +1,7 @@
 'use strict'
 
 const gulp = require('gulp')
-  const sass = require('gulp-ruby-sass')
+  const sass = require('gulp-sass')
   const postcss = require('gulp-postcss')
     const sugarss = require('sugarss')
     const autoprefixer = require('autoprefixer')
