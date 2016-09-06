@@ -4,7 +4,7 @@
   "authors": [
     "Dustin Dowell <dustindowell22@gmail.com>"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/dustindowell22/plump",
   "keywords": [
     "plump",
@@ -19,7 +19,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "color-sass": "^2.0.0",
-    "vue": "^1.0.26"
+    "color-sass": "^2.0.0"
   }
 }
