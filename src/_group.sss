@@ -1,9 +1,9 @@
 .plump-group
   display: flex
-  min-height: em(32) // select
+  min-height: em(32) // FIX: Use plump on `select` elements
 
   .plump
-    flex: 1 0 auto // safari and android flex-basis bug
+    flex: 1 0 auto // BUG: Safari and Android set flex-basis to zero when using shorthand
 
     + .plump
       margin: em(0 0 0 2)
