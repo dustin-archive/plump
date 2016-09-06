@@ -1,5 +1,5 @@
-$inner-radius:  4 !default
-$outer-radius: 16 !default
+$plump-inner: 4 !default
+$plump-outer: 16 !default
 
 @mixin plump-round($first, $last, $only)
   &:first-child
@@ -12,15 +12,15 @@ $outer-radius: 16 !default
     border-radius: em($only)
 
 .plump.-round > .slot
-  $i: $inner-radius
-  $o: $outer-radius
+  $i: $plump-inner
+  $o: $plump-outer
 
   border-radius: 0
   @include plump-round($o 0 0 $o, 0 $o $o 0, $o)
 
 .plump-group
-  $i: $inner-radius
-  $o: $outer-radius
+  $i: $plump-inner
+  $o: $plump-outer
 
   &.-round .plump
     > .slot
