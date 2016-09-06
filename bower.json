@@ -18,7 +18,8 @@
     "node_modules",
     "bower_components"
   ],
-  "dependencies": {
-    "color-sass": "^2.0.0"
+  "devDependencies": {
+    "color-sass": "^2.0.0",
+    "mint-sass": "^2.1.2"
   }
 }
