@@ -1,5 +1,5 @@
 {
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dustindowell22/plump.git"
@@ -10,7 +10,7 @@
     "gulp-jade": "^1.1.0",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
-    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sass": "^2.3.2",
     "sugarss": "^0.1.4"
   }
 }
