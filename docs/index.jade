@@ -1,3 +1,6 @@
+mixin input
+  input(size='1')&attributes(attributes)
+
 include /bower_components/pilot-frame/jade/index
 
 +html
@@ -7,29 +10,80 @@ include /bower_components/pilot-frame/jade/index
       include /css/index.css
 
   body
-    .demo
-      h1 BUTTONS
-    .demo
-        .plump-group.-round
-          .plump.-white: .slot plump
+    .demo: h1 PLUMP
     .demo
       .plump-group.-round
-        .plump.-white: .slot plump
-        .plump.-white: .slot plump
+        .plump.-white: .slot Plump
     .demo
       .plump-group.-round
-        .plump.-white: .slot plump
-        .plump.-white: .slot plump
-        .plump.-white: .slot plump
+        .plump.-white: .slot Plump
+        .plump.-white: .slot Plump
     .demo
-        .plump-group.-column.-round
-          .plump.-white: .slot plump
-    .demo
-      .plump-group.-column.-round
-        .plump.-white: .slot plump
-        .plump.-white: .slot plump
+      .plump-group.-round
+        .plump.-white: .slot Plump
+        .plump.-white: .slot Plump
+        .plump.-white: .slot Plump
     .demo
       .plump-group.-column.-round
-        .plump.-white: .slot plump
-        .plump.-white: .slot plump
-        .plump.-white: .slot plump
+        .plump.-white: .slot Plump
+    .demo
+      .plump-group.-column.-round
+        .plump.-white: .slot Plump
+        .plump.-white: .slot Plump
+    .demo
+      .plump-group.-column.-round
+        .plump.-white: .slot Plump
+        .plump.-white: .slot Plump
+        .plump.-white: .slot Plump
+
+    .demo: h1 BUTTON
+    .demo
+      .plump-group.-button.-round
+        .plump.-white: .slot Plump
+    .demo
+      .plump-group.-button.-round
+        .plump.-white: .slot Plump
+        .plump.-white: .slot Plump
+    .demo
+      .plump-group.-button.-round
+        .plump.-white: .slot Plump
+        .plump.-white: .slot Plump
+        .plump.-white: .slot Plump
+    .demo
+      .plump-group.-button.-column.-round
+        .plump.-white: .slot Plump
+    .demo
+      .plump-group.-button.-column.-round
+        .plump.-white: .slot Plump
+        .plump.-white: .slot Plump
+    .demo
+      .plump-group.-button.-column.-round
+        .plump.-white: .slot Plump
+        .plump.-white: .slot Plump
+        .plump.-white: .slot Plump
+
+    .demo: h1 INPUT
+    .demo
+      .plump-group.-round
+        .plump.-white.-round: +input.slot(type='text' placeholder='Plump')
+    .demo
+      .plump-group.-round
+        .plump.-white.-round: +input.slot(type='text' placeholder='Plump')
+        .plump.-white.-round: +input.slot(type='text' placeholder='Plump')
+    .demo
+      .plump-group.-round
+        .plump.-white.-round: +input.slot(type='text' placeholder='Plump')
+        .plump.-white.-round: +input.slot(type='text' placeholder='Plump')
+        .plump.-white.-round: +input.slot(type='text' placeholder='Plump')
+    .demo
+      .plump-group.-column.-round
+        .plump.-white.-round: +input.slot(type='text' placeholder='Plump')
+    .demo
+      .plump-group.-column.-round
+        .plump.-white.-round: +input.slot(type='text' placeholder='Plump')
+        .plump.-white.-round: +input.slot(type='text' placeholder='Plump')
+    .demo
+      .plump-group.-column.-round
+        .plump.-white.-round: +input.slot(type='text' placeholder='Plump')
+        .plump.-white.-round: +input.slot(type='text' placeholder='Plump')
+        .plump.-white.-round: +input.slot(type='text' placeholder='Plump')

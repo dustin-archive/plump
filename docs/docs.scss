@@ -1,13 +1,29 @@
 @import 'bower_components/color-sass/scss/main';
 @import 'bower_components/pilot-reset/scss/main';
 
+$color: rgba(mix($blue, $green, random(100)), 0.5);
+
+* {
+  transition: box-shadow 0.25s ease-in-out;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25em $color;
+}
+
 body {
-  background: rgba(mix($blue, $green, random(100)), 0.5);
+  color: $color;
+  background: $color;
+}
+
+::-webkit-input-placeholder {
+  color: $color;
 }
 
 h1 {
   color: $white;
-  font-size: 4.75em;
+  font-size: 4.5em;
   font-weight: bold;
   text-align: center;
 }
