@@ -39,19 +39,19 @@ gulp.task('watch', () => {
   gulp.watch('src/**/*', ['scss'])
 })
 
-// DEMO
-gulp.task('demo:scss', () => {
-  return gulp.src('demo/*.scss')
+// docs
+gulp.task('docs:scss', () => {
+  return gulp.src('docs/*.scss')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(gulp.dest('demo'))
+    .pipe(gulp.dest('docs'))
 })
 
-gulp.task('demo:jade', () => {
-  return gulp.src('demo/*.jade')
+gulp.task('docs:jade', () => {
+  return gulp.src('docs/*.jade')
     .pipe(jade({ basedir: __dirname }))
-    .pipe(gulp.dest('demo'))
+    .pipe(gulp.dest('docs'))
 })
 
-gulp.task('demo:watch', () => {
-  gulp.watch(['demo/*.jade', 'demo/*.scss'], ['demo:scss', 'demo:jade'])
+gulp.task('docs:watch', () => {
+  gulp.watch(['docs/*.jade', 'docs/*.scss'], ['docs:scss', 'docs:jade'])
 })
