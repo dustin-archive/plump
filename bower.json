@@ -1,18 +1,10 @@
 {
   "name": "plump",
   "description": "Sweet button library",
-  "authors": [
-    "Dustin Dowell <dustindowell22@gmail.com>"
-  ],
-  "license": "MIT",
+  "authors": ["Dustin Dowell (https://github.com/dustindowell22)"],
   "homepage": "https://github.com/dustindowell22/plump",
-  "keywords": [
-    "plump",
-    "button",
-    "css",
-    "scss",
-    "sass"
-  ],
+  "license": "MIT",
+  "keywords": ["plump", "button", "css", "scss", "sass"],
   "ignore": [
     "**/.*",
     "node_modules",
@@ -20,6 +12,7 @@
   ],
   "devDependencies": {
     "color-sass": "^2.0.0",
-    "mint-sass": "^2.1.2"
+    "mint-sass": "^2.1.2",
+    "pilot-frame": "^1.1.1"
   }
 }
