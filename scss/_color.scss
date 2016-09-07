@@ -1,0 +1,45 @@
+@mixin plump($normal, $hover: $normal, $active: $normal) {
+  > .slot {
+    background: $normal
+  }
+
+  &:hover > .slot {
+    background: $hover
+  }
+
+  &:active > .slot {
+    background: $active
+  }
+}
+
+.plump {
+  @include plump($gray);
+
+  &.-black {
+    @include plump($black)
+  }
+
+  &.-white {
+    @include plump($white)
+  }
+
+  &.-red {
+    @include plump($red)
+  }
+
+  &.-orange {
+    @include plump($orange)
+  }
+
+  &.-green {
+    @include plump($green)
+  }
+
+  &.-blue {
+    @include plump($blue)
+  }
+
+  &.-purple {
+    @include plump($purple)
+  }
+}

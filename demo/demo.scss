@@ -2,12 +2,18 @@
 @import 'bower_components/pilot-reset/scss/main';
 
 body {
-  margin: 0.5em;
   background: rgba(mix($blue, $green, random(100)), 0.5);
 }
 
+h1 {
+  color: $white;
+  font-size: 4.875em;
+  font-weight: bold;
+  text-align: center;
+}
+
 .demo {
-  max-width: 30em;
+  width: 25em;
   margin: auto;
   padding: 0.5em 1em;
 }

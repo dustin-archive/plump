@@ -1,0 +1,24 @@
+.plump-group {
+  display: flex;
+  min-height: em($plump-height);
+
+  .plump {
+    flex: 1 0 auto;
+
+    + .plump {
+      margin: em(0 0 0 $plump-margin)
+    }
+  }
+
+  &.-button > .plump {
+    @extend %plump-button
+  }
+
+  &.-column {
+    flex-flow: column;
+
+    > .plump + .plump {
+      margin: em($plump-margin 0 0)
+    }
+  }
+}

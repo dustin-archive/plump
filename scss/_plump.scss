@@ -1,0 +1,31 @@
+.plump {
+  display: flex;
+  white-space: no-wrap;
+  user-select: none;
+  appearance: none;
+
+  > .slot {
+    $p: $plump-padding;
+    $i: $plump-padding-inner;
+    $o: $plump-padding-outer;
+
+    flex: 1 0 auto;
+    padding: em($p);
+
+    &:first-child {
+      padding: em($p $i $p $o)
+    }
+
+    &:last-child {
+      padding: em($p $o $p $i)
+    }
+
+    &:only-child {
+      padding: em($p $o)
+    }
+  }
+}
+
+.plump.-button {
+  @extend %plump-button
+}
