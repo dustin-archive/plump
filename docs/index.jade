@@ -2,8 +2,10 @@ include /bower_components/pilot-frame/jade/index
 
 +html
   +head
-    +style('docs.css')
-    +style('../css/index.css')
+    style
+      include docs.css
+      include /css/index.css
+
   body
     .demo
       h1 BUTTONS
