@@ -23,7 +23,7 @@ gulp.task('scss', ['sss'], () => {
 })
 
 gulp.task('jade', () => {
-  return gulp.src('src/**/index.jade')
+  return gulp.src('index.jade')
     .pipe(jade({ pretty: true }))
     .pipe(gulp.dest(''))
 })
