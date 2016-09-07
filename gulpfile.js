@@ -35,14 +35,23 @@ gulp.task('scss', ['sss'], () => {
     .pipe(gulp.dest('css'))
 })
 
-gulp.task('jade', () => {
+gulp.task('watch', () => {
+  gulp.watch('src/**/*', ['scss'])
+})
+
+// DEMO
+gulp.task('demo:scss', () => {
+  return gulp.src('demo/*.scss')
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(gulp.dest('demo'))
+})
+
+gulp.task('demo:jade', () => {
   return gulp.src('demo/*.jade')
     .pipe(jade({ basedir: __dirname }))
     .pipe(gulp.dest('demo'))
 })
 
-gulp.task('build', ['scss', 'jade'])
-
-gulp.task('watch', () => {
-  gulp.watch(['demo/*', 'src/**/*'], ['build'])
+gulp.task('demo:watch', () => {
+  gulp.watch(['demo/*.jade', 'demo/*.scss'], ['demo:scss', 'demo:jade'])
 })
