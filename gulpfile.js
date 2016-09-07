@@ -5,12 +5,25 @@ const gulp = require('gulp')
   const postcss = require('gulp-postcss')
     const sugarss = require('sugarss')
     const autoprefixer = require('autoprefixer')
+    const comments = require('postcss-discard-comments')
+    const sorting = require('postcss-sorting')
   const jade = require('gulp-jade')
   const rename = require('gulp-rename')
 
-gulp.task('sss', () => {
+gulp.task('lint', () => {
   return gulp.src('src/**/*.sss')
-    .pipe(postcss([], { parser: sugarss }))
+    .pipe(postcss([
+      sorting({
+        'empty-lines-between-children-rules': 1,
+        'empty-lines-between-media-rules': 1
+      })
+    ], { syntax: sugarss }))
+    .pipe(gulp.dest('src'))
+})
+
+gulp.task('sss', ['lint'], () => {
+  return gulp.src('src/**/*.sss')
+    .pipe(postcss([comments], { parser: sugarss }))
     .pipe(rename({ extname: '.scss' }))
     .pipe(gulp.dest('scss'))
 })
