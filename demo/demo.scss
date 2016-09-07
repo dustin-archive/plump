@@ -1,0 +1,13 @@
+@import 'bower_components/color-sass/scss/main';
+@import 'bower_components/pilot-reset/scss/main';
+
+body {
+  margin: 0.5em;
+  background: rgba(mix($blue, $green, random(100)), 0.5);
+}
+
+.demo {
+  max-width: 30em;
+  margin: auto;
+  padding: 0.5em 1em;
+}
