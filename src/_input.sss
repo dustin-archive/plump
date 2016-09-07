@@ -1,11 +1,12 @@
 .plump
   display: flex
   white-space: no-wrap
+  user-select: none
   -webkit-appearance: none
-  -webkit-user-select: none
+     -moz-appearance: none
 
   > .slot
-    flex: 1 0 auto // safari and android flex-basis bug
+    flex: 1 0 auto // BUG: Safari and Android sets `flex-basis: 0` when using shorthand
     padding: em(8)
 
     &:first-child
