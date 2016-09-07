@@ -1,9 +1,17 @@
 {
-  "license": "MIT",
+  "name": "plump",
+  "description": "Sweet button library",
+  "version": "1.0.0",
+  "homepage": "https://github.com/dustindowell22/plump#readme",
+  "author": "Dustin Dowell (https://github.com/dustindowell22)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dustindowell22/plump.git"
   },
+  "bugs": {
+    "url": "https://github.com/dustindowell22/plump/issues"
+  },
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.4.1",
     "gulp": "^3.9.1",
