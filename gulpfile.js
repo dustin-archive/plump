@@ -30,19 +30,19 @@ gulp.task('sss', ['lint'], () => {
 
 gulp.task('scss', ['sss'], () => {
   return gulp.src('scss/**/*.scss')
-    .pipe(sass({ style: 'expanded' }).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([ autoprefixer ]))
     .pipe(gulp.dest('css'))
 })
 
 gulp.task('jade', () => {
-  return gulp.src('index.jade')
-    .pipe(jade({ pretty: true }))
-    .pipe(gulp.dest(''))
+  return gulp.src('demo/*.jade')
+    .pipe(jade({ basedir: __dirname }))
+    .pipe(gulp.dest('demo'))
 })
 
 gulp.task('build', ['scss', 'jade'])
 
 gulp.task('watch', () => {
-  gulp.watch('src/**/*', ['build'])
+  gulp.watch(['demo/*', 'src/**/*'], ['build'])
 })
