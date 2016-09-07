@@ -1,12 +1,12 @@
 .plump-group
   display: flex
-  min-height: em(32) // FIX: Use plump on `<select>`
+  min-height: em($plump-height) // FIX: Use plump on `<select>`
 
   .plump
     flex: 1 0 auto // BUG: Safari and Android sets `flex-basis: 0` when using shorthand
 
     + .plump
-      margin: em(0 0 0 2)
+      margin: em(0 0 0 $plump-margin)
 
   &.-button > .plump
     @extend %plump-button
@@ -15,4 +15,4 @@
     flex-flow: column
 
     > .plump + .plump
-      margin: em(2 0 0)
+      margin: em($plump-margin 0 0)

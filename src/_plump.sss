@@ -5,17 +5,21 @@
   appearance: none
 
   > .slot
+    $p: $plump-padding
+    $i: $plump-padding-inner
+    $o: $plump-padding-outer
+
     flex: 1 0 auto // BUG: Safari and Android sets `flex-basis: 0` when using shorthand
-    padding: em(8)
+    padding: em($p)
 
     &:first-child
-      padding: em(8 6 8 12)
+      padding: em($p $i $p $o)
 
     &:last-child
-      padding: em(8 12 8 6)
+      padding: em($p $o $p $i)
 
     &:only-child
-      padding: em(8 12)
+      padding: em($p $o)
 
 .plump.-button
   @extend %plump-button

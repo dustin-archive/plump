@@ -1,6 +1,3 @@
-$plump-inner: 4 !default
-$plump-outer: 16 !default
-
 @mixin plump-round($first, $last, $only)
   &:first-child
     border-radius: em($first)
@@ -11,17 +8,19 @@ $plump-outer: 16 !default
   &:only-child
     border-radius: em($only)
 
+// postcss-sorting: off
 .plump.-round > .slot
-  $i: $plump-inner
-  $o: $plump-outer
+  $i: $plump-radius-inner
+  $o: $plump-radius-outer
+
+  border-radius: 0
 
   @include plump-round($o 0 0 $o, 0 $o $o 0, $o)
-
-  // border-radius: 0 // this is supposed to be above plump-round mixin?
+// postcss-sorting: on
 
 .plump-group
-  $i: $plump-inner
-  $o: $plump-outer
+  $i: $plump-radius-inner
+  $o: $plump-radius-outer
 
   &.-round .plump
     > .slot
