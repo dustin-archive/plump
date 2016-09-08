@@ -1,7 +1,9 @@
 @import 'bower_components/color-sass/scss/main';
 @import 'bower_components/pilot-reset/scss/main';
 
-$color: rgba(mix($blue, $green, random(100)), 0.5);
+$color: mix($blue, $green, random(100));
+$color-light: rgba($color, 0.5);
+$color-dark: rgba($color, 0.75);
 
 * {
   transition: box-shadow 0.25s ease-in-out;
@@ -9,16 +11,16 @@ $color: rgba(mix($blue, $green, random(100)), 0.5);
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.25em $color;
+  box-shadow: 0 0 0 0.25em $color-dark;
 }
 
 body {
-  color: $color;
-  background: $color;
+  color: $color-dark;
+  background: $color-light;
 }
 
 ::-webkit-input-placeholder {
-  color: $color;
+  color: $color-dark;
 }
 
 h1 {
